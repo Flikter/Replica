@@ -87,7 +87,10 @@ MAD STUDIO
 
 ----- Dependencies -----
 
-local ReplicaShared = game.ReplicatedStorage.ReplicaShared
+local CollectionService = game:GetService("CollectionService")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local Players = game:GetService("Players")
+local ReplicaShared = ReplicatedStorage.ReplicaShared
 local RateLimit = require(ReplicaShared.RateLimit)
 local Remote = require(ReplicaShared.Remote)
 local Signal = require(ReplicaShared.Signal)
@@ -100,10 +103,6 @@ local CS_TAG = "REPLICA" -- CollectionService tag
 local REPLICATION_ALL = "ALL"
 local MAID_LOCK = {}
 local EMPTY_TABLE = {}
-
-local CollectionService = game:GetService("CollectionService")
-local ReplicatedStorage = game:GetService("ReplicatedStorage")
-local Players = game:GetService("Players")
 
 local GlobalRateLimit = RateLimit.New(120)
 
