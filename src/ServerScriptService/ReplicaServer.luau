@@ -860,7 +860,6 @@ local function DestroyReplica(replica)
 	local id = replica.Id
 	-- Clear replica entry:
 	Replicas[id] = nil
-	Tokens[replica.Token] = nil
 	-- Cleanup:
 	replica.Maid:Unlock(MAID_LOCK)
 	replica.Maid:Cleanup()
