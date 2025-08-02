@@ -65,9 +65,15 @@ MAD STUDIO
 	
 --]]
 
+----- Services -----
+
+local CollectionService = game:GetService("CollectionService")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local Players = game:GetService("Players")
+
 ----- Dependencies -----
 
-local ReplicaShared = game.ReplicatedStorage.ReplicaShared
+local ReplicaShared = ReplicatedStorage.ReplicaShared
 local Remote = require(ReplicaShared.Remote)
 local Signal = require(ReplicaShared.Signal)
 local Maid = require(ReplicaShared.Maid)
@@ -78,10 +84,6 @@ local BIND_TAG = "Bind"
 local CS_TAG = "REPLICA" -- CollectionService tag
 local MAID_LOCK = {}
 local REQUEST_DATA_REPEAT = 2
-
-local CollectionService = game:GetService("CollectionService")
-local ReplicatedStorage = game:GetService("ReplicatedStorage")
-local Players = game:GetService("Players")
 
 local DataRequestStarted = false
 
